@@ -1564,46 +1564,50 @@
         </b:section>
       </div>
       <!-- //SIDEBAR -->
-
-      <!-- BLOG FOOTER -->
-      <div class='site-footer'>
-        <div class='container'>
-          <div class='row'>
-
-            <!-- COPYRIGHT -->
-            <div class='col-md-8'>
-              <p class='site-generator'>
-                <a expr:href='data:blog.homepageUrl'><data:blog.title/></a>
-              </p>
-
-              <!-- SILAKAN HAPUS JIKA AND MAU. MESKI TIDAK WAJIB, SAYA TENTU AKAN SANGAT SENANG JIKA ANDA BERKENAN MENCANTUMKANNYA KREDIT. -->
-              <p class='crafter'>
-                <span class='crafter-label'>Crafted by</span> 
-                <span class='crafter-content'><a href='//mixroba.com'>Mixroba Studio</a></span>
-              </p>
-            </div>
-            <!-- //COPYRIGHT -->
-
-            <!-- BLOG SOCIAL ICONS -->
-            <div class='col-md-4'>
-              <ul class='social-icons'>
-                <li><a href='' title='Facebook'><span class='fa fa-facebook fa-fw'/></a></li>
-                <li><a href='' title='Twitter'><span class='fa fa-twitter fa-fw'/></a></li>
-                <li><a href='' title='Google Plus'><span class='fa fa-google-plus fa-fw'/></a></li>
-                <li><a href='' title='Pinterest'><span class='fa fa-pinterest fa-fw'/></a></li>
-                <li><a href='' title='Instagram'><span class='fa fa-instagram fa-fw'/></a></li>
-                <li><a href='' title='RSS'><span class='fa fa-rss fa-fw'/></a></li>
-              </ul>
-            </div>
-            <!-- //BLOG SOCIAL ICONS -->
-          
-          </div><!-- .row -->
-        </div><!-- .container-->
-      </div><!-- .site-footer -->
-      <!-- BLOG FOOTER -->
-
+      
     </div><!-- .row -->
   </div><!-- .container -->
+  
+  <!-- BLOG FOOTER -->
+  <div class='site-footer'>
+    <div class='container'>
+      <div class='row'>
+
+        <!-- COPYRIGHT -->
+        <div class='col-md-8'>
+          <p class='site-generator'>
+            <a expr:href='data:blog.homepageUrl'><data:blog.title/></a>
+          </p>
+
+          <!-- 
+            SILAKAN HAPUS JIKA AND MAU. MESKI TIDAK WAJIB, SAYA TENTU AKAN SANGAT MENGHARGAI 
+            APABILA ANDA BERKENAN MENCANTUMKAN KREDIT. TAPI, SEKALI LAGI, ITU TIDAK WAJIB.
+          -->
+          <p class='crafter'>
+            <span class='crafter-label'>Crafted by</span> 
+            <span class='crafter-content'><a href='//mixroba.com'>Mixroba Studio</a></span>
+          </p>
+        </div>
+        <!-- //COPYRIGHT -->
+
+        <!-- BLOG SOCIAL ICONS -->
+        <div class='col-md-4'>
+          <ul class='social-icons'>
+            <!-- GANTI DENGAN ALAMAT AKUN MEDSOS ANDA -->
+            <li><a href='' title='Facebook'><span class='fa fa-facebook fa-fw'/></a></li>
+            <li><a href='' title='Twitter'><span class='fa fa-twitter fa-fw'/></a></li>
+            <li><a href='' title='Google Plus'><span class='fa fa-google-plus fa-fw'/></a></li>
+            <li><a href='' title='Pinterest'><span class='fa fa-pinterest fa-fw'/></a></li>
+            <li><a href='' title='Instagram'><span class='fa fa-instagram fa-fw'/></a></li>
+            <li><a href='' title='RSS'><span class='fa fa-rss fa-fw'/></a></li>
+          </ul>
+        </div>
+        <!-- //BLOG SOCIAL ICONS -->
+
+      </div><!-- .row -->
+    </div><!-- .container-->
+  </div><!-- .site-footer -->
+  <!-- BLOG FOOTER -->
 
   <!-- BOOTSTRAP SCRIPTS -->
   <script crossorigin='anonymous' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' src='https://code.jquery.com/jquery-3.2.1.slim.min.js'/>
