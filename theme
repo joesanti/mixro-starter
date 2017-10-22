@@ -186,7 +186,6 @@
             <b:widget-settings>
               <b:widget-setting name='content'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor iaculis lorem, ac dictum nisi luctus vitae. In ullamcorper tortor nunc, molestie dictum tortor malesuada et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</b:widget-setting>
             </b:widget-settings>
-
             <b:includable id='main'>
               <b:include name='widget-title'/>
               <div class='widget-content'>
@@ -200,7 +199,6 @@
               <b:include name='widget-title'/>
               <b:include name='content'/>
             </b:includable>
-
             <b:includable id='content'>
               <div class='widget-content'>
                 <div class='follow-by-email-inner'>
@@ -233,12 +231,10 @@
               <b:widget-setting name='link-2'>http://lintasjabar.com</b:widget-setting>
               <b:widget-setting name='link-0'>http://jurnal-sagala.blogspot.co.id/</b:widget-setting>
             </b:widget-settings>
-
             <b:includable id='main'>
               <b:include name='widget-title'/>
               <b:include name='content'/>
             </b:includable>
-
             <b:includable id='content'>
               <div class='widget-content'>
                 <ul>
@@ -249,6 +245,42 @@
               </div>
             </b:includable>
           </b:widget>
+
+          <b:widget id='Attribution1' locked='true' title='' type='Attribution' visible='true'>
+            <b:widget-settings>
+              <b:widget-setting name='copyright'/>
+            </b:widget-settings>
+            <b:includable id='main' var='this'>
+              <div class='widget-content'>
+                <div class='blogger'>
+                  <a expr:href='data:bloggerUrl'>
+                    <b:include name='flatBloggerIcon'/>
+                    <b:message name='messages.poweredByBlogger'/>
+                  </a>
+                </div>
+
+                <b:if cond='data:imageAuthor'>
+                  <div class='image-attribution'>
+                    <b:if cond='data:imageAuthor.url'>
+                      <b:message name='messages.templateImagesByLink'>
+                        <b:param expr:value='data:imageAuthor.url'/>
+                        <b:param expr:value='data:imageAuthor.name'/>
+                      </b:message>
+                    <b:else/>
+                      <b:message name='messages.templateImagesBy'>
+                        <b:param expr:value='data:imageAuthor.name'/>
+                      </b:message>
+                    </b:if>
+                  </div>
+                </b:if>
+
+                <b:if cond='data:copyright != &quot;&quot;'>
+                  <div class='copyright'><data:copyright/></div>
+                </b:if>
+              </div>
+            </b:includable>
+          </b:widget>
+
         </b:section>
       </div>
       <!-- //SIDEBAR -->
