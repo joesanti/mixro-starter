@@ -12,7 +12,70 @@
   <!-- FONT AWESOME v4.7.0-->
   <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css' rel='stylesheet' type='text/css'/>
   
-  <b:skin version='1.1.0'><![CDATA[ ]]></b:skin>
+  <b:skin version='1.1.0'><![CDATA[ 
+
+
+  
+  ]]></b:skin>
+
+  <b:if cond='data:blog.pageType == &quot;item&quot;'>
+  <style>
+    .post-body .separator {
+      margin: 0 auto 20px;
+    }
+
+    .post-body .separator a {
+      margin: 0 !important;
+    }
+
+    .post-body .separator img {
+      max-width: 100%;
+    }
+
+    .post-outer {
+      padding-bottom: 20px;
+    }
+  </style>
+  </b:if>
+
+  <script async='async' defer='defer' src='//assets.pinterest.com/js/pinit.js' type='text/javascript'/>
+
+  <script type='text/javascript'>
+    //<![CDATA[
+    function HTMLtagdrop(strx,chop) {
+      if (strx.indexOf("<")!=-1) {
+        var s = strx.split("<");
+        for (var i=0;i<s.length;i++) {
+          if (s[i].indexOf(">")!=-1) {
+            s[i] = s[i].substring(s[i].indexOf(">")+1,s[i].length);
+          }
+        }
+        
+        strx = s.join("");
+      }
+
+      chop = (chop < strx.length-1) ? chop : strx.length-2;
+      while (strx.charAt(chop-1)!=' ' && strx.indexOf(' ',chop)!=-1) chop++;
+      strx = strx.substring(0,chop-1);
+      return strx+'...';
+    }
+
+    function postExcerpt(pID) {
+      var div = document.getElementById(pID);
+      var imgtag = "";
+      var img = div.getElementsByTagName("img");
+      var summ = 400;
+      
+      if (img.length>=1) {
+        imgtag = '<div class="post-excerpt-thumb"><img src="'+img [0].src+'" alt="" /></div>';
+        summ = 350;
+      }
+
+      var summary = imgtag + '<div>' + HTMLtagdrop(div.innerHTML,summ) + '</div>';
+      div.innerHTML = summary;
+    }
+    //]]>
+  </script>
   
 </head>
 
