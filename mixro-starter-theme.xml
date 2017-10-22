@@ -12,7 +12,13 @@
   <!-- FONT AWESOME v4.7.0-->
   <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css' rel='stylesheet' type='text/css'/>
   
-  <b:skin version='1.1.0'><![CDATA[ 
+  <b:skin version='1.1.0'><![CDATA[/*
+    -----------------------------------------------
+    Blogger Template Style
+    Name:     Mixro Starter (silakan ganti dengan nama tema yang Anda inginkan)
+    Designer: Joe Alfaraby (silakan ganti dengan nama Anda)
+    URL:      www.mixroba.com
+    ----------------------------------------------- */
 
     body {}
 
