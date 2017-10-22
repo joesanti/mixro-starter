@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+  <meta content='width=device-width, initial-scale=1' name='viewport'/>
+  <title><data:view.title.escaped/></title>
+  <b:include data='blog' name='all-head-content'/>
+  
+  <!-- BOOTSTRAP v4.0.0 CSS -->
+  <link crossorigin='anonymous' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css' integrity='sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb' rel='stylesheet'/>
+  
+  <!-- FONT AWESOME v4.7.0-->
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css' rel='stylesheet' type='text/css'/>
+  
+  <b:skin version='1.1.0'><![CDATA[ ]]></b:skin>
+  
+</head>
+
+<body>
+
+  <b:include name='skipNavigation'/>
+  
+  <!-- NAVBAR -->
+  <b:section class='topnav' id='topnav' maxwidgets='1' name='Main Menu' showaddelement='true'>
+    <b:widget id='PageList1' locked='false' title='' type='PageList' version='2' visible='true'>
+      <b:widget-settings>
+        <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'https://mixrobabloggertheme.blogspot.com/', 'title': 'Home', 'position': 0}, '2665139451717657670': {'href': 'https://mixrobabloggertheme.blogspot.com/p/blog-page.html', 'title': 'About', 'position': 1}, '1081969130474633751': {'href': 'https://mixrobabloggertheme.blogspot.com/p/portfolio.html', 'title': 'Portfolio', 'position': 2}, '1179193830171072374': {'href': 'https://mixrobabloggertheme.blogspot.com/p/contact.html', 'title': 'Contact', 'position': 3}, '4656569329143577409': {'href': 'https://mixrobabloggertheme.blogspot.com/p/disclaimer.html', 'title': 'Disclaimer', 'position': 4}}]]></b:widget-setting>
+        <b:widget-setting name='homeTitle'>Home</b:widget-setting>
+      </b:widget-settings>
+      
+      <b:includable id='main'>
+        <b:include name='widget-title'/>
+        <b:include name='content'/>
+      </b:includable>
+
+      <b:includable id='bootstrapNavbarBrand'>
+        <a expr:class='&quot;navbar-brand&quot;' expr:href='data:blog.homepageUrl'><data:blog.title/></a>
+      </b:includable>
+
+      <b:includable id='bootstrapNavbarSearchForm'>
+        <form action='/search/max-results=10' class='form-inline my-2 my-lg-0' method='get'>
+          <input aria-label='Search' class='form-control mr-sm-2' name='q' placeholder='Search' type='search'/>
+          <button class='btn btn-primary my-2 my-sm-0' type='submit'><span class='fa fa-search fa-fw'/></button>
+        </form>
+      </b:includable>
+
+      <b:includable id='bootstrapNavbarToggler'>
+        <button aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation' class='navbar-toggler' data-target='#navbarSupportedContent' data-toggle='collapse' type='button'>
+          <span class='navbar-toggler-icon'/>
+        </button>
+      </b:includable>
+
+      <b:includable id='content'>
+        <div class='widget-content'>
+          <b:include name='pageList'/>
+        </div>
+      </b:includable>
+
+      <b:includable id='overflowButton'>
+        <b:include name='verticalMoreIcon'/>
+      </b:includable>
+
+      <b:includable id='overflowablePageList'>
+        <div class='overflowable-container'>
+          <div class='overflowable-contents'>
+            <div class='container'>
+              <b:with value='true' var='overflow'>
+                <b:with value='&quot;tabs&quot;' var='pageListClass'>
+                  <b:include name='pageList'/>
+                </b:with>
+              </b:with>
+            </div>
+          </div>
+
+          <div class='overflow-button hidden'>
+            <b:include name='overflowButton'/>
+          </div>
+        </div>
+      </b:includable>
+
+      <b:includable id='pageLink'>
+        <li class='nav-item'>
+          <b:class cond='data:overflow' name='overflowable-item'/>
+          <b:class cond='data:link.isCurrentPage' name='selected'/>
+          <a expr:class='&quot;nav-link&quot;' expr:href='data:link.href'><data:link.title/></a>
+        </li>
+      </b:includable>
+
+      <b:includable id='pageList'>
+        <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
+          <b:include name='bootstrapNavbarBrand'/>
+          <b:include name='bootstrapNavbarToggler'/>
+
+          <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+            <ul class='navbar-nav mr-auto'>
+              <b:class cond='data:pageListClass' expr:name='data:pageListClass'/>
+              <b:loop values='data:links' var='link'>
+                <b:include name='pageLink'/>
+              </b:loop>
+            </ul>
+
+            <b:include name='bootstrapNavbarSearchForm'/>
+          </div>
+        </nav>
+      </b:includable>
+      
+    </b:widget>
+  </b:section>
+  <!-- //NAVBAR -->
+  
+  <!-- BLOG HEADER -->
+  <header class='site-branding' role='banner'>
+    <b:section class='container' id='header' maxwidgets='1' name='Header' showaddelement='false'>
+      
+      <b:widget id='Header1' locked='true' title='Mixro Starter (Header)' type='Header' visible='true'>
+        <b:widget-settings>
+          <b:widget-setting name='displayUrl'/>
+          <b:widget-setting name='displayHeight'>0</b:widget-setting>
+          <b:widget-setting name='sectionWidth'>150</b:widget-setting>
+          <b:widget-setting name='useImage'>false</b:widget-setting>
+          <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
+          <b:widget-setting name='imagePlacement'>BEHIND</b:widget-setting>
+          <b:widget-setting name='displayWidth'>0</b:widget-setting>
+        </b:widget-settings>
+        
+        <b:includable id='main' var='this'>
+          <div class='header-widget'>
+            <b:include cond='data:imagePlacement in {&quot;REPLACE&quot;, &quot;BEFORE_DESCRIPTION&quot;}' name='image'/>
+            <b:include cond='data:imagePlacement not in {&quot;REPLACE&quot;, &quot;BEFORE_DESCRIPTION&quot;}' name='title'/>
+            <b:include cond='data:imagePlacement != &quot;REPLACE&quot;' name='description'/>
+          </div>
+          
+          <b:include cond='data:imagePlacement == &quot;BEHIND&quot;' name='behindImageStyle'/>
+        </b:includable>
+        
+        <b:includable id='behindImageStyle'>
+          <b:if cond='data:sourceUrl'>
+            <b:include cond='data:this.image' data='{                    image: data:this.image,                    selector: &quot;.header-widget&quot;                  }' name='responsiveImageStyle'/>
+            <style type='text/css'>
+              .header-widget {
+                background-position: <data:blog.locale.languageAlignment/>;
+                background-repeat: no-repeat;
+              }
+            </style>
+          </b:if>
+        </b:includable>
+        
+        <b:includable id='description'>
+          <p>
+            <data:this.description/>
+          </p>
+        </b:includable>
+        
+        <b:includable id='image'>
+          <a class='header-image-wrapper' expr:href='data:blog.homepageUrl'>
+            <b:include data='{                                                 image: data:image,                                                 altText: data:blog.title.escaped                                               }' name='responsiveImage'/>
+          </a>
+        </b:includable>
+
+        <b:includable id='title'>
+          <h1>
+            <b:tag cond='data:view.url != data:blog.homepageUrl' expr:href='data:blog.homepageUrl' name='a'>
+              <data:title/>
+            </b:tag>
+          </h1>
+        </b:includable>
+        
+      </b:widget>
+    </b:section>
+  </header>
+  <!-- //BLOG HEADER -->
+
+  <div class='container'>
+    <div class='row'>
+
+      <!-- BLOG POSTS -->
+      <b:section class='col-md-8' id='page_body' maxwidgets='1' name='Post Body' showaddelement='false'>
+        <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'/>
+      </b:section>
+      <!-- //BLOG POSTS -->
+
+      <!-- SIDEBAR -->
+      <div class='col-md-4'>
+        <b:section class='sidebar' id='sidebar' name='Sidebar' showaddelement='true'>
+          <b:widget id='Text1' locked='false' title='About Mixro Starter' type='Text' visible='true'>
+            <b:widget-settings>
+              <b:widget-setting name='content'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor iaculis lorem, ac dictum nisi luctus vitae. In ullamcorper tortor nunc, molestie dictum tortor malesuada et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</b:widget-setting>
+            </b:widget-settings>
+
+            <b:includable id='main'>
+              <b:include name='widget-title'/>
+              <div class='widget-content'>
+                <data:content/>
+              </div>
+            </b:includable>
+          </b:widget>
+
+          <b:widget id='FollowByEmail1' locked='false' title='Follow by Email' type='FollowByEmail' version='2' visible='true'>
+            <b:includable id='main'>
+              <b:include name='widget-title'/>
+              <b:include name='content'/>
+            </b:includable>
+
+            <b:includable id='content'>
+              <div class='widget-content'>
+                <div class='follow-by-email-inner'>
+                  <form action='https://feedburner.google.com/fb/a/mailverify' expr:onsubmit='&quot;window.open(\&quot;https://feedburner.google.com/fb/a/mailverify?uri=&quot; + data:feedPath + &quot;\&quot;, \&quot;popupwindow\&quot;, \&quot;scrollbars=yes,width=550,height=520\&quot;); return true&quot;' method='post' target='popupwindow'>
+                    <input autocomplete='off' class='follow-by-email-address' expr:placeholder='data:messages.emailAddress' name='email' type='email'/>
+                    <input class='follow-by-email-submit' type='submit' value='Subscribe'/>
+                    <input expr:value='data:feedPath' name='uri' type='hidden'/>
+                    <input name='loc' type='hidden' value='en_US'/>
+                  </form>
+                </div>
+              </div>
+            </b:includable>
+          </b:widget>
+
+          <b:widget id='LinkList1' locked='false' title='Blogroll' type='LinkList' visible='true'>
+            <b:widget-settings>
+              <b:widget-setting name='link-5'>https://defuture41.blogspot.co.id/</b:widget-setting>
+              <b:widget-setting name='link-6'>http://kumarni.blogspot.co.id/</b:widget-setting>
+              <b:widget-setting name='link-3'>http://almarwah.sch.id</b:widget-setting>
+              <b:widget-setting name='link-4'>https://7infomedia.blogspot.co.id/</b:widget-setting>
+              <b:widget-setting name='text-1'>Sentra Oribelle</b:widget-setting>
+              <b:widget-setting name='text-0'>Jurnal Sagala</b:widget-setting>
+              <b:widget-setting name='text-3'>Almarwah Sekolahku</b:widget-setting>
+              <b:widget-setting name='text-2'>Lintas Jabar</b:widget-setting>
+              <b:widget-setting name='text-5'>The Future Zone</b:widget-setting>
+              <b:widget-setting name='text-4'>7 Info Media</b:widget-setting>
+              <b:widget-setting name='text-6'>Kumarni</b:widget-setting>
+              <b:widget-setting name='sorting'>NONE</b:widget-setting>
+              <b:widget-setting name='link-1'>http://sentraoribelle.com</b:widget-setting>
+              <b:widget-setting name='link-2'>http://lintasjabar.com</b:widget-setting>
+              <b:widget-setting name='link-0'>http://jurnal-sagala.blogspot.co.id/</b:widget-setting>
+            </b:widget-settings>
+
+            <b:includable id='main'>
+              <b:include name='widget-title'/>
+              <b:include name='content'/>
+            </b:includable>
+
+            <b:includable id='content'>
+              <div class='widget-content'>
+                <ul>
+                <b:loop values='data:links' var='link'>
+                  <li><a expr:href='data:link.target'><data:link.name/></a></li>
+                </b:loop>
+                </ul>
+              </div>
+            </b:includable>
+          </b:widget>
+        </b:section>
+      </div>
+      <!-- //SIDEBAR -->
+
+      <!-- BLOG FOOTER -->
+      <div class='site-footer'>
+        <div class='container'>
+          <div class='row'>
+
+            <!-- COPYRIGHT -->
+            <div class='col-md-8'>
+              <p class='site-generator'>
+                <a expr:href='data:blog.homepageUrl'><data:blog.title/></a>
+              </p>
+
+              <!-- SILAKAN HAPUS JIKA AND MAU. MESKI TIDAK WAJIB, SAYA TENTU AKAN SANGAT SENANG JIKA ANDA BERKENAN MENCANTUMKANNYA KREDIT. -->
+              <p class='crafter'>
+                <span class='crafter-label'>Crafted by</span> 
+                <span class='crafter-content'><a href='//mixroba.com'>Mixroba Studio</a></span>
+              </p>
+            </div>
+            <!-- //COPYRIGHT -->
+
+            <!-- BLOG SOCIAL ICONS -->
+            <div class='col-md-4'>
+              <ul class='social-icons'>
+                <li><a href='' title='Facebook'><span class='fa fa-facebook fa-fw'/></a></li>
+                <li><a href='' title='Twitter'><span class='fa fa-twitter fa-fw'/></a></li>
+                <li><a href='' title='Google Plus'><span class='fa fa-google-plus fa-fw'/></a></li>
+                <li><a href='' title='Pinterest'><span class='fa fa-pinterest fa-fw'/></a></li>
+                <li><a href='' title='Instagram'><span class='fa fa-instagram fa-fw'/></a></li>
+                <li><a href='' title='RSS'><span class='fa fa-rss fa-fw'/></a></li>
+              </ul>
+            </div>
+            <!-- //BLOG SOCIAL ICONS -->
+          
+          </div><!-- .row -->
+        </div><!-- .container-->
+      </div><!-- .site-footer -->
+      <!-- BLOG FOOTER -->
+
+    </div><!-- .row -->
+  </div><!-- .container -->
+
+  <!-- BOOTSTRAP SCRIPTS -->
+  <script crossorigin='anonymous' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' src='https://code.jquery.com/jquery-3.2.1.slim.min.js'/>
+  <script crossorigin='anonymous' integrity='sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh' src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js'/>
+  <script crossorigin='anonymous' integrity='sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ' src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js'/>
+  <!-- //BOOTSTRAP SCRIPTS -->
+  
+</body>
+</html>
