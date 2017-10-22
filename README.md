@@ -1,2 +1,2 @@
 # mixro-starter
-Google Blogger starter theme
+Template starter untuk Google Blogger dengan Bootstrap v4.0.0-beta.2 dan FontAwesome v4.7.0.
